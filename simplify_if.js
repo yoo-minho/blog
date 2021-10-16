@@ -49,33 +49,25 @@ function getLogic11(alphabet, number, korean) {
 }
 
 function getLogic111(alphabet, number, korean) {
-    let logicName = "";
-    if (alphabet === "A") {
-        logicName = {
+    return {
+        "A": {
             0: {
                 "가": "LOGIC_1",
                 "나": "LOGIC_2",
             }[korean],
             1: "LOGIC_3"
+        }[alphabet],
+        "B": {
+            2: "LOGIC:4",
+            3: {
+                "가": "LOGIC_4",
+                "다": "LOGIC_5"
+            }[korean]
         }[alphabet]
-    } else if (alphabet === "B") {
-        if (number === 2) {
-            logicName = "LOGIC_4";
-        } else if (number === 3) {
-            if (korean === "가") {
-                logicName = "LOGIC_5";
-            } else if (korean === "다") {
-                logicName = "LOGIC_6";
-            }
-        }
-    } else {
-        if (korean === "나") {
-            logicName = "LOGIC_7";
-        } else if (korean === "다") {
-            logicName = "LOGIC_";
-        }
-    }
-    return logicName;
+    } || {
+        "가": "LOGIC_7",
+        "다": "LOGIC_8"
+    }[korean] || "";
 }
 
 function getLogic2(alphabet, number, korean) {
@@ -163,3 +155,80 @@ function getLogic333(alphabet) {
 }
 
 //함수도 이케 활용가능? 쌉가능
+
+const funcA = () => "LOGIC_1";
+const funcB = () => "LOGIC_2";
+const funcC = () => "LOGIC_3";
+const funcD = () => "LOGIC_4";
+const funcE = () => "LOGIC_5";
+const funcF = () => "LOGIC_6";
+const funcG = () => "LOGIC_7";
+
+function getLogin3(alphabet) {
+    let logicName = "";
+    if (alphabet === "A") {
+        logicName = funcA();
+    } else if (alphabet === "B") {
+        logicName = funcB();
+    } else if (alphabet === "C") {
+        logicName = funcC();
+    } else if (alphabet === "D") {
+        logicName = funcD();
+    } else if (alphabet === "E") {
+        logicName = funcE();
+    } else if (alphabet === "F") {
+        logicName = funcF();
+    } else {
+        logicName = funcG();
+    }
+    return logicName;
+}
+
+function getLogic33(alphabet) {
+    let logicName = "";
+    switch (alphabet) {
+        case "A" :
+            logicName = funcA();
+            break;
+        case "B" :
+            logicName = funcB();
+            break;
+        case "C" :
+            logicName = funcC();
+            break;
+        case "D" :
+            logicName = funcD();
+            break;
+        case "E" :
+            logicName = funcE();
+            break;
+        case "F" :
+            logicName = funcF();
+            break;
+        default :
+            logicName = funcG();
+    }
+    return logicName;
+}
+
+function getLogic3333(alphabet) {
+    return ({
+        "A": funcA(),
+        "B": funcB(),
+        "C": funcC(),
+        "D": funcD(),
+        "E": funcE(),
+        "F": funcF(),
+    }[alphabet] || funcG())
+}
+
+function getLogic3333(alphabet) {
+    return ({
+        "A": funcA,
+        "B": funcB,
+        "C": funcC,
+        "D": funcD,
+        "E": funcE,
+        "F": funcF,
+    }[alphabet] || funcG)()
+}
