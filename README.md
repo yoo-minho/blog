@@ -35,7 +35,7 @@ if (A) {
 
 방법1. EARLY RETURN, EARLY EXIT
 
-그 말대로 일찍이 RETURN 하고, 함수를 빠져나오는 것이다. 바로 코드를 보자.
+말대로 일찍이 RETURN 하고, 함수를 빠져나오는 것이다. 바로 코드를 보자.
 
 ```js
 function isNumber(v) {
@@ -47,11 +47,7 @@ function getBoardByRegisterId(registerId) {
     if (registerId.length >= 4) {
         if (isNumber(registerId)) {
             const data = [];
-            /**
-             * 블라블라블라
-             * 20 Line ...
-             * 블라블라블라
-             */
+            // 20 Line ...
             return data;
         } else {
             alert('아이디는 숫자만 유효합니다.');
