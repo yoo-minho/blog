@@ -14,7 +14,7 @@
 https://velog.io/@miz/Spring-DTO%EC%9D%98-%EC%83%9D%EC%84%B1-%EB%B0%8F-%EB%A0%88%EC%9D%B4%EC%96%B4-%EC%9D%B4%EB%8F%99
 
 - jpa create 및 update 시 dto에서 entity 변환방식 - 인프런 | 질문 & 답변
-https://www.inflearn.com/questions/30076
+https://www.inflearn.com/questions/30076 
 
 - [Java] dto와 entity 변환하기 -3 <Generic Method>
 https://velog.io/@a45hvn/Java-dto%EC%99%80-entity-%EB%B3%80%ED%99%98%ED%95%98%EA%B8%B0-3
