@@ -34,3 +34,5 @@ https://www.inflearn.com/course/%EB%A7%8C%EB%93%A4%EB%A9%B4%EC%84%9C-%EB%B0%B0%E
 
 번외
 
+(1) Node.js, MongoDB 로 TODO 만들기 - 디렉토리 설정, app.js 작성
+https://earth-ing.tistory.com/m/33
