@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function () {
         //console.log('if', getFruitEmojiByIf('lemon'));
         console.time('if');
         let v;
-        for (let i = 0 ; i < 10000 ; i++){
+        for (let i = 0; i < 10000; i++) {
             v += getFruitEmojiByIf('lemon');
         }
         console.log(v);
@@ -22,7 +22,22 @@ window.addEventListener('DOMContentLoaded', function () {
         //console.log('switch', getFruitEmojiBySwitch('lemon'));
         console.time('switch');
         let v;
-        for (let i = 0 ; i < 10000 ; i++){
+        for (let i = 0; i < 10000; i++) {
+            v += getFruitEmojiBySwitch('lemon')
+        }
+        console.log(v);
+        console.timeEnd('switch');
+    });
+
+    const jsonBtn = document.createElement('button');
+    jsonBtn.textContent = 'json';
+    jsonBtn.addEventListener("click", function () {
+        getFruitEmojiByJson('lemon');
+        return;
+        //console.log('switch', getFruitEmojiBySwitch('lemon'));
+        console.time('switch');
+        let v;
+        for (let i = 0; i < 10000; i++) {
             v += getFruitEmojiBySwitch('lemon')
         }
         console.log(v);
@@ -32,6 +47,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const body = document.querySelector("body");
     body.append(ifBtn);
     body.append(switchBtn);
+    body.append(jsonBtn);
 })
 
 function getFruitEmojiByIf(name) {
@@ -67,6 +83,16 @@ function getFruitEmojiBySwitch(name) {
         default :
             return '';
     }
+}
+
+function getFruitEmojiByJson(name) {
+    return {
+        'apple': '🍎',
+        'pineapple': '🍍',
+        'banana': '🍌',
+        'kiwi': '🥝',
+        'lemon': '🍋',
+    }[name] || '';
 }
 
 function getMinNumberSwitch(n) {
