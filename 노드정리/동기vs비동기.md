@@ -99,9 +99,4 @@
 원하는 최종 결과물을 만들어 내면 된다.
 
 
-
 -https://evan-moon.github.io/2019/09/19/sync-async-blocking-non-blocking/
-
-
-
-프로그래밍은 동기와 비동기를 적절하게 버무리는 것.
