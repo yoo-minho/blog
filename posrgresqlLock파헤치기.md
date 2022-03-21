@@ -1,0 +1,1 @@
+[DB] Postgresql Lock 파헤치기. Read Lock, Write Lock, Race condition… | by chrisjune | 29CM 기술블로그 | Medium - https://medium.com/29cm/db-postgresql-lock-%ED%8C%8C%ED%97%A4%EC%B9%98%EA%B8%B0-57d37ebe057
